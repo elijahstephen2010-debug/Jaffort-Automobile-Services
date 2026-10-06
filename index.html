@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jafort Systems | Genuine Auto Spare Parts</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="#" class="logo" onclick="showPage('home')">
+            <span>J</span>
+            JAFORT <small>SYSTEMS</small>
+        </a>
+
+        <nav class="navbar" id="navbar">
+
+            <a href="#" class="nav-link active" onclick="showPage('home')">
+                Home
+            </a>
+
+            <a href="#" class="nav-link" onclick="showPage('parts')">
+                Spare Parts
+            </a>
+
+            <a href="#" class="nav-link" onclick="showPage('categories')">
+                Categories
+            </a>
+
+            <a href="#" class="nav-link" onclick="showPage('vehicles')">
+                Vehicles
+            </a>
+
+            <a href="#" class="nav-link" onclick="showPage('about')">
+                About Us
+            </a>
+
+            <a href="#" class="nav-link" onclick="showPage('contact')">
+                Contact
+            </a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="cart-btn" onclick="showPage('cart')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </button>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="page active-page">
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="hero-tag">
+                    QUALITY • RELIABILITY • CONFIDENCE
+                </span>
+
+                <h1>
+                    Genuine Parts.
+                    <span>Reliable Performance.</span>
+                </h1>
+
+                <p>
+                    Find quality auto spare parts for your vehicle.
+                    Shop genuine and trusted automotive components
+                    from Jafort Systems.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="btn primary-btn"
+                        onclick="showPage('parts')"
+                    >
+                        Shop Spare Parts
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                        class="btn outline-btn"
+                        onclick="showPage('vehicles')"
+                    >
+                        Find Your Vehicle
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <div class="hero-image-box">
+
+                    <i class="fa-solid fa-gears"></i>
+
+                    <div>
+                        <strong>JAFORT</strong>
+                        <span>AUTOMOTIVE PARTS</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="features">
+
+        <div class="container feature-grid">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <div>
+                    <h3>Quality Parts</h3>
+                    <p>Reliable automotive components.</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <div>
+                    <h3>Fast Delivery</h3>
+                    <p>Convenient delivery options.</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <div>
+                    <h3>Expert Support</h3>
+                    <p>Help finding the right part.</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+                    <h3>Trusted Service</h3>
+                    <p>Professional customer experience.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POPULAR PARTS -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">OUR PRODUCTS</span>
+
+                    <h2>Popular Spare Parts</h2>
+                </div>
+
+                <button
+                    class="text-btn"
+                    onclick="showPage('parts')"
+                >
+                    View All
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <div class="product-grid" id="home-products"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VEHICLE FINDER -->
+
+    <section class="finder-section">
+
+        <div class="container">
+
+            <div class="finder-box">
+
+                <div class="finder-content">
+
+                    <span class="section-label">
+                        FIND THE RIGHT PART
+                    </span>
+
+                    <h2>Find Parts For Your Vehicle</h2>
+
+                    <p>
+                        Select your vehicle and discover compatible
+                        spare parts available at Jafort Systems.
+                    </p>
+
+                </div>
+
+
+                <div class="finder-form">
+
+                    <select id="home-brand">
+                        <option value="">Select Brand</option>
+                        <option>Toyota</option>
+                        <option>Lexus</option>
+                        <option>Honda</option>
+                        <option>Mercedes-Benz</option>
+                        <option>Hyundai</option>
+                    </select>
+
+
+                    <select id="home-model">
+
+                        <option value="">
+                            Select Model
+                        </option>
+
+                        <option>Camry</option>
+                        <option>Corolla</option>
+                        <option>Highlander</option>
+                        <option>RX 350</option>
+                        <option>Civic</option>
+                        <option>Accord</option>
+
+                    </select>
+
+
+                    <button
+                        class="btn primary-btn"
+                        onclick="findVehicleParts()"
+                    >
+                        Find Parts
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= PARTS PAGE ================= -->
+
+<section id="parts" class="page">
+
+    <div class="page-banner">
+
+        <div class="container">
+
+            <span>JAFORT SYSTEMS</span>
+
+            <h1>Spare Parts</h1>
+
+            <p>
+                Find quality parts for your vehicle.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="shop-toolbar">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-search"></i>
+
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Search for a part, brand or vehicle..."
+                        onkeyup="searchProducts()"
+                    >
+
+                </div>
+
+
+                <select id="category-filter" onchange="filterProducts()">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Engine Parts">
+                        Engine Parts
+                    </option>
+
+                    <option value="Brake System">
+                        Brake System
+                    </option>
+
+                    <option value="Filters">
+                        Filters
+                    </option>
+
+                    <option value="Electrical">
+                        Electrical
+                    </option>
+
+                    <option value="Suspension">
+                        Suspension
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="product-grid" id="all-products"></div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories" class="page">
+
+    <div class="page-banner">
+
+        <div class="container">
+
+            <span>SHOP BY CATEGORY</span>
+
+            <h1>Spare Parts Categories</h1>
+
+            <p>
+                Find the part you need quickly.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="category-grid">
+
+                <div class="category-card" onclick="categoryProducts('Engine Parts')">
+                    <i class="fa-solid fa-gears"></i>
+                    <h3>Engine Parts</h3>
+                    <p>Engine components and accessories.</p>
+                </div>
+
+
+                <div class="category-card" onclick="categoryProducts('Brake System')">
+                    <i class="fa-solid fa-circle-stop"></i>
+                    <h3>Brake System</h3>
+                    <p>Brake pads, discs and components.</p>
+                </div>
+
+
+                <div class="category-card" onclick="categoryProducts('Filters')">
+                    <i class="fa-solid fa-filter"></i>
+                    <h3>Filters</h3>
+                    <p>Oil, air and fuel filters.</p>
+                </div>
+
+
+                <div class="category-card" onclick="categoryProducts('Electrical')">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Electrical</h3>
+                    <p>Batteries, lights and electrical parts.</p>
+                </div>
+
+
+                <div class="category-card" onclick="categoryProducts('Suspension')">
+                    <i class="fa-solid fa-car-side"></i>
+                    <h3>Suspension</h3>
+                    <p>Reliable suspension components.</p>
+                </div>
+
+
+                <div class="category-card" onclick="categoryProducts('Body Parts')">
+                    <i class="fa-solid fa-car"></i>
+                    <h3>Body Parts</h3>
+                    <p>Quality exterior components.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= VEHICLES ================= -->
+
+<section id="vehicles" class="page">
+
+    <div class="page-banner">
+
+        <div class="container">
+
+            <span>VEHICLE COMPATIBILITY</span>
+
+            <h1>Find Parts For Your Vehicle</h1>
+
+            <p>
+                Select your vehicle to see compatible parts.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="vehicle-selector">
+
+                <h2>Select Your Vehicle</h2>
+
+                <p>
+                    Tell us what you drive and we'll help you
+                    find compatible parts.
+                </p>
+
+
+                <div class="vehicle-form">
+
+                    <div class="input-group">
+
+                        <label>Vehicle Brand</label>
+
+                        <select id="vehicle-brand">
+                            <option value="">Select Brand</option>
+                            <option>Toyota</option>
+                            <option>Lexus</option>
+                            <option>Honda</option>
+                            <option>Mercedes-Benz</option>
+                            <option>Hyundai</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Vehicle Model</label>
+
+                        <select id="vehicle-model">
+                            <option value="">Select Model</option>
+                            <option>Camry</option>
+                            <option>Corolla</option>
+                            <option>Highlander</option>
+                            <option>RX 350</option>
+                            <option>Civic</option>
+                            <option>Accord</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Year</label>
+
+                        <select id="vehicle-year">
+
+                            <option value="">Select Year</option>
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        class="btn primary-btn"
+                        onclick="findVehicleParts()"
+                    >
+                        Find Compatible Parts
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div id="vehicle-results" class="vehicle-results"></div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="page">
+
+    <div class="page-banner">
+
+        <div class="container">
+
+            <span>ABOUT JAFORT SYSTEMS</span>
+
+            <h1>Driven By Quality</h1>
+
+            <p>
+                Automotive parts you can depend on.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container about-grid">
+
+            <div class="about-content">
+
+                <span class="section-label">
+                    WHO WE ARE
+                </span>
+
+                <h2>
+                    Reliable Parts For Every Journey
+                </h2>
+
+                <p>
+                    Jafort Systems is an automobile spare-parts
+                    company focused on providing customers with
+                    quality automotive components and a reliable
+                    shopping experience.
+                </p>
+
+                <p>
+                    From engine components to brake systems,
+                    filters and electrical parts, we make it easier
+                    to find the right parts for your vehicle.
+                </p>
+
+                <div class="about-stats">
+
+                    <div>
+                        <strong>500+</strong>
+                        <span>Parts</span>
+                    </div>
+
+                    <div>
+                        <strong>20+</strong>
+                        <span>Vehicle Brands</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Online Access</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-visual">
+
+                <div class="about-logo-box">
+
+                    <i class="fa-solid fa-gears"></i>
+
+                    <strong>JAFORT</strong>
+
+                    <span>SYSTEMS</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="page">
+
+    <div class="page-banner">
+
+        <div class="container">
+
+            <span>GET IN TOUCH</span>
+
+            <h1>Contact Jafort Systems</h1>
+
+            <p>
+                Need help finding a part? We're here to help.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container contact-grid">
+
+            <div class="contact-info">
+
+                <span class="section-label">
+                    CONTACT US
+                </span>
+
+                <h2>
+                    Let's Find The Right Part
+                </h2>
+
+                <p>
+                    Speak with our team about vehicle compatibility,
+                    spare parts and orders.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+                        <span>Phone</span>
+                        <strong>+234 800 000 0000</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+                        <span>Email</span>
+                        <strong>info@jafortsystems.com</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+                        <span>Location</span>
+                        <strong>Nigeria</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" onsubmit="sendMessage(event)">
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>Full Name</label>
+
+                        <input
+                            type="text"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        placeholder="+234..."
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Message</label>
+
+                    <textarea
+                        rows="6"
+                        placeholder="How can we help?"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button class="btn primary-btn" type="submit">
+                    Send Message
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= PRODUCT DETAILS ================= -->
+
+<section id="product-details" class="page">
+
+    <section class="section">
+
+        <div class="container">
+
+            <button class="back-btn" onclick="showPage('parts')">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Parts
+            </button>
+
+            <div id="product-detail-content"></div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= CART ================= -->
+
+<section id="cart" class="page">
+
+    <div class="page-banner">
+
+        <div class="container">
+
+            <span>YOUR SHOPPING CART</span>
+
+            <h1>Your Cart</h1>
+
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container">
+
+            <div id="cart-content"></div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<section id="checkout" class="page">
+
+    <div class="page-banner">
+
+        <div class="container">
+
+            <span>SECURE CHECKOUT</span>
+
+            <h1>Checkout</h1>
+
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container checkout-grid">
+
+
+            <form
+                class="checkout-form"
+                id="checkout-form"
+                onsubmit="goToPayment(event)"
+            >
+
+                <h2>Customer Information</h2>
+
+                <div class="input-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="customer-name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="customer-phone"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            id="customer-email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Delivery Address</label>
+
+                    <textarea
+                        id="customer-address"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Delivery Option</label>
+
+                    <select id="delivery-option">
+
+                        <option value="delivery">
+                            Home Delivery
+                        </option>
+
+                        <option value="pickup">
+                            Pickup
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button class="btn primary-btn full-btn">
+                    Continue to Payment
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+
+            <div class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div id="checkout-summary"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= PAYMENT ================= -->
+
+<section id="payment" class="page">
+
+    <div class="page-banner">
+
+        <div class="container">
+
+            <span>SECURE PAYMENT</span>
+
+            <h1>Complete Your Payment</h1>
+
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container payment-container">
+
+            <div class="payment-card">
+
+                <div class="payment-top">
+
+                    <div>
+
+                        <span>ORDER</span>
+
+                        <strong id="order-number">
+                            #JFS1024
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>TOTAL</span>
+
+                        <strong id="payment-total">
+                            ₦0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <h2>Select Payment Method</h2>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="card"
+                        checked
+                    >
+
+                    <span>
+                        <i class="fa-solid fa-credit-card"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>Card Payment</strong>
+
+                        <small>
+                            Pay securely using your card.
+                        </small>
+
+                    </div>
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="transfer"
+                    >
+
+                    <span>
+                        <i class="fa-solid fa-building-columns"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>Bank Transfer</strong>
+
+                        <small>
+                            Transfer directly to Jafort Systems.
+                        </small>
+
+                    </div>
+
+                </label>
+
+
+                <div id="card-fields">
+
+                    <div class="input-group">
+
+                        <label>Card Number</label>
+
+                        <input
+                            type="text"
+                            placeholder="1234 5678 9012 3456"
+                        >
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+
+                            <label>Expiry Date</label>
+
+                            <input
+                                type="text"
+                                placeholder="MM/YY"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>CVV</label>
+
+                            <input
+                                type="password"
+                                placeholder="•••"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn primary-btn full-btn"
+                    onclick="completePayment()"
+                >
+                    Pay Now
+                    <i class="fa-solid fa-lock"></i>
+                </button>
+
+                <p class="secure-note">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Secure demo checkout
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ================= SUCCESS ================= -->
+
+<section id="success" class="page">
+
+    <section class="success-section">
+
+        <div class="success-card">
+
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <span class="section-label">
+                ORDER CONFIRMED
+            </span>
+
+            <h1>Thank You For Your Order</h1>
+
+            <p>
+                Your order has been received successfully.
+                Our team will contact you shortly to confirm
+                your order and delivery details.
+            </p>
+
+            <div class="success-order">
+
+                <span>Order Number</span>
+
+                <strong id="success-order-number">
+                    #JFS1024
+                </strong>
+
+            </div>
+
+            <div class="success-buttons">
+
+                <button
+                    class="btn primary-btn"
+                    onclick="showPage('parts')"
+                >
+                    Continue Shopping
+                </button>
+
+                <button
+                    class="btn outline-btn"
+                    onclick="showPage('home')"
+                >
+                    Back Home
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="#" class="logo">
+                <span>J</span>
+                JAFORT <small>SYSTEMS</small>
+            </a>
+
+            <p>
+                Quality automotive spare parts,
+                reliable service and a better way to
+                find the right parts for your vehicle.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('parts')">Spare Parts</a>
+            <a href="#" onclick="showPage('categories')">Categories</a>
+            <a href="#" onclick="showPage('about')">About Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Categories</h3>
+
+            <a href="#" onclick="categoryProducts('Engine Parts')">
+                Engine Parts
+            </a>
+
+            <a href="#" onclick="categoryProducts('Brake System')">
+                Brake System
+            </a>
+
+            <a href="#" onclick="categoryProducts('Filters')">
+                Filters
+            </a>
+
+            <a href="#" onclick="categoryProducts('Electrical')">
+                Electrical
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +234 800 000 0000
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@jafortsystems.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Nigeria
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 Jafort Systems. All Rights Reserved.
+            </p>
+
+            <p>
+                Built with quality in mind.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="index.js"></script>
+
+</body>
+</html>
